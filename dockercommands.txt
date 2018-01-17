@@ -1,0 +1,21 @@
+version
+info
+container run --publish 80:80 nginx
+container run --publish 80:80 --deteach nginx
+container ls
+container ls -a
+container run --publish 80:80 --deteach --name webhost nginx
+container logs webhost
+container rm name1 name2
+container rm -f name1
+
+
+container run -it
+container exec -it 
+container start -ai
+container run -p
+container port <container>
+
+
+container port <container name>
+container inspect --foramt '{{.NetworkSettings,IPAddress }}' <container name> 
